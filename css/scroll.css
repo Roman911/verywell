@@ -1,0 +1,37 @@
+.h-scroll-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Скрол контейнер */
+.h-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* плавна прокрутка на iOS */
+  scroll-behavior: smooth;
+  display: flex;
+  gap: 6px;
+  /* приховуємо стандартні скролбар (не в усіх браузерах) */
+  scrollbar-width: none; /* Firefox */
+}
+.h-scroll::-webkit-scrollbar { display: none; } /* WebKit */
+
+/* Дрібні елементи всередині */
+.item {
+  width: 124px; /* ширина елемента; змінюй під дизайн */
+  height: 220px;
+  flex: 0 0 auto;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+/* На мобайлі можна ховати кнопки або змінити вигляд */
+@media (max-width: 768px) {
+  .h-scroll-btn { opacity: 0.8; }
+}

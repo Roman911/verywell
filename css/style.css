@@ -1,0 +1,322 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+ * Extends the .visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visually-hidden.focusable:active,
+.visually-hidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * The use of `table` rather than `block` is only necessary if using
+ * `::before` to contain the top-margins of child elements.
+ */
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 0.825rem;
+}
+
+button {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 1.5rem 1rem;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: Inter, sans-serif;
+
+  .header {
+    display: flex;
+    align-items: center;
+    color: white;
+
+    img {
+      border-radius: 1rem;
+      margin-right: 1rem;
+    }
+
+    h1 {
+      margin-bottom: 0.725rem;
+    }
+  }
+
+  .install {
+    width: 100%;
+    background: #FF8804;
+    border-radius: 1.25rem;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 1rem 0;
+    padding: 0.725rem;
+  }
+
+  .rating {
+    margin-top: 1rem;
+    text-align: center;
+    position: relative;
+
+    p {
+      color: white;
+      font-size: 12px;
+    }
+
+    .old {
+      position: absolute;
+      top: 0;
+      right: 0;
+      border: 1px solid #FF8804;
+      color: #FF8804;
+      font-size: 10px;
+      padding: 10px 8px;
+      border-radius: 6px;
+    }
+  }
+
+  video {
+    margin-top: 1rem;
+    max-width: 100%;
+  }
+
+  .comments {
+    margin-top: 1rem;
+
+    .comment {
+      border: 1px solid #FF8804;
+      padding: 1.5rem 1rem;
+      border-radius: 12px;
+      min-width: 210px;
+      height: 160px;
+      display: flex;
+      background: rgba(0, 0, 0, 0.50);
+
+      .avatar {
+        height: 40px;
+        min-width: 40px;
+        border-radius: 50%;
+        color: white;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 0.35rem;
+        background: linear-gradient(to right, #06b6d4, #3b82f6);
+      }
+
+      .info {
+        margin-left: 1rem;
+      }
+
+      .name {
+        color: white;
+        font-size: 10px;
+      }
+
+      .user-rating {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+
+        img {
+          max-width: 8px;
+        }
+      }
+
+      color: white;
+      font-size: 10px;
+    }
+  }
+
+  .feedback {
+    margin-top: 1rem;
+    font-size: 8px;
+    color: #949494;
+  }
+}
